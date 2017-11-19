@@ -1,6 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+
+const port = process.env.PORT || 3000;
 let app = express();
 
 //app.use((req, res, next) => {
@@ -46,6 +48,6 @@ app.get('/bad', (req, res) => {
     res.send({status: 404, message: 'The page wasn\'t found!'})
 });
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000!');
+app.listen(port, () => {
+    console.log(`Server is up on port ${port} !`);
 });
