@@ -44,6 +44,13 @@ app.get('/about', (req, res) => {
    });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        page_title: 'Projects',
+        page_description: "Here should be cool projects !"
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({status: 404, message: 'The page wasn\'t found!'})
 });
